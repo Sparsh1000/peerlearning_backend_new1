@@ -1,0 +1,17 @@
+const express = require('express');
+const router = express.Router();
+//const getAssignment = require('../../controllers/Students/getAssignment');
+const Assignment = require('../../models/assignment')
+
+router.get('/', async (req, res) => {
+  var courseId = req.query.course_id
+  //console.log(courseId)
+  Assignment.find({ course_id: courseId }, (err, result) => {
+    if (err) {
+      res.json(err)
+    } else {
+      res.status(200).json({ courseId })
+    }
+  })
+})
+module.exports = router;
