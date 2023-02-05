@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     if (err) {
       res.json(err)
     } else {
-      res.status(200).json({ courseId })
+      res.status(200).json({ result })
     }
   })
 })
