@@ -8,7 +8,6 @@ var arr = []
 var v = new Map()
 var temp = []
 var count
-
 // start peer learning on an assignment
 exports.assignReviewers = async (req, res) => {
   var peerAssignmentId = req.query.peer_assignment_id
